@@ -5,7 +5,7 @@ Los candidatos se agrupan por partido y el programa permite visualizar en una gr
 ---
 
 ## Resultado obtenido
-![Gráfica de líos por partido](https://i.ibb.co/7Nnf27hg/lios-por-partido.png")
+![Gráfica de líos por partido](https://i.ibb.co/qMG9vVWc/lios-por-partido.png")
 
 ---
 
