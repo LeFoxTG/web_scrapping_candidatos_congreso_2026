@@ -76,8 +76,20 @@ def graficar_lios(candidatos):
     # Contar la cantidad de candidatos con líos por partido
     conteo = df_partidos.groupby('partido').size().sort_values(ascending=False)
 
+    # Configurar el estilo de la gráfica para que sea más pro :p
+    dark_params = {
+            "figure.facecolor": "#121212",  # Fondo de la ventana/imagen
+            "axes.facecolor": "#121212",    # Fondo del área de la gráfica
+            "text.color": "#E0E0E0",        # Color del texto de títulos
+            "axes.labelcolor": "#E0E0E0",   # Color del texto de los ejes
+            "xtick.color": "#A0A0A0",       # Color de los valores en X
+            "ytick.color": "#E0E0E0",       # Color de los nombres de los partidos en Y
+            "grid.color": "#2A2A2A",        # Color de las líneas guía (sutil)
+            "axes.edgecolor": "#2A2A2A"     # Color del borde de la gráfica
+        }
+
     # Estilo general
-    sns.set_theme(style="whitegrid", palette="viridis")
+    sns.set_theme(style="darkgrid", rc=dark_params)
 
     # Preparar datos para la gráfica
     conteo_df = conteo.reset_index()
@@ -90,14 +102,15 @@ def graficar_lios(candidatos):
     sns.barplot(
         data=conteo_df,
         y='partido',       # Horizontal: partidos en el eje Y
-        x='cantidad',      # Cantidad en el eje X
-        palette='flare',   # Paleta de colores
+        x='cantidad',      # Vertical: cantidad de candidatos con líos en el eje X
+        hue='partido',     # Diferenciar por partido usando el mismo campo para el color
+        palette='viridis', # Paleta de colores
         ax=ax
     )
 
     # Agregar el número al final de cada barra
     for container in ax.containers:
-        ax.bar_label(container, padding=4, fontsize=10)
+        ax.bar_label(container, padding=4, fontsize=10, color="#E0E0E0")
 
     # Títulos y etiquetas
     ax.set_title('Candidatos con líos o cuestionamientos por partido\nElecciones Congreso 2026', 
@@ -109,7 +122,7 @@ def graficar_lios(candidatos):
     sns.despine(left=True, bottom=False)
 
     plt.tight_layout()
-    plt.savefig('lios_por_partido.png', dpi=200, bbox_inches='tight')
+    plt.savefig('lios_por_partido.png', dpi=200, bbox_inches='tight', facecolor=fig.get_facecolor())
     plt.show()
 
 # URL del sitio web a scrapear
