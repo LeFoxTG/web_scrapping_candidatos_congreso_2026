@@ -1,5 +1,5 @@
 # Web Scrapping candidatos al congreso 2026
-Web Scrapping sencillo hecho con python para extraer los datos de los candidatos al Congreso de la Republica de Colombia para el año 2026, tomados del medio de comunicación [La Silla Vacía](https://elecciones-2026.lasillavacia.com).
+Web Scrapping sencillo hecho con python para extraer los datos de los candidatos al Congreso de la República de Colombia para el año 2026, tomados del medio de comunicación [La Silla Vacía](https://elecciones-2026.lasillavacia.com).
 Los candidatos se agrupan por partido y el programa permite visualizar en una gráfica de barras la cantidad de candidatos con líos o cuestionamientos en cada partido.
 
 ---
