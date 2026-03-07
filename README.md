@@ -2,7 +2,7 @@
 Web Scrapping sencillo hecho con python para extraer los datos de los candidatos al Congreso de la República de Colombia para el año 2026, tomados del medio de comunicación [La Silla Vacía](https://elecciones-2026.lasillavacia.com).
 Los candidatos se agrupan por partido y el programa permite visualizar en una gráfica de barras la cantidad de candidatos con líos o cuestionamientos en cada partido.
 
-### **Actualización**
+### **Actualización!!!1!!11!**
 Ahora, además del scrapping, se añadieron los datos de un informe de la [Fundación Pares](https://www.pares.com.co/elecciones-colombia-2026/candidatas-y-candidatos-cuestionados-al-congreso-de-la-republica-2026/), en el cual también se enlistan los candidatos con líos/cuestionamientos. Todos los datos de ambas fuentes se fusionan en la gráfica final para poder hacer una comparativa.
 
 ---
@@ -11,7 +11,7 @@ Ahora, además del scrapping, se añadieron los datos de un informe de la [Funda
 ### Solo utilizando [La Silla Vacía](https://elecciones-2026.lasillavacia.com) como fuente
 ![Gráfica de líos por partido](https://i.ibb.co/qMG9vVWc/lios-por-partido.png")
 ### Utilizando y comparando ambas fuentes ([La Silla Vacía](https://elecciones-2026.lasillavacia.com) y [Fundación Pares](https://www.pares.com.co/elecciones-colombia-2026/candidatas-y-candidatos-cuestionados-al-congreso-de-la-republica-2026/))
-![Gráfica de líos por partido (comparativa ambas fuentes)](https://i.ibb.co/3yRvkb4h/comparativo-lios-partidos.png)
+![Gráfica de líos por partido (comparativa ambas fuentes)](https://i.ibb.co/3yRvkb4h/comparativo-lios-partidos.png")
 ---
 
 ## ¿Cómo funciona?
@@ -24,6 +24,7 @@ El sitio de La Silla Vacía está construido con **Next.js**, lo que significa q
 5. Genera una gráfica con **seaborn** y **matplotlib**
 
 Para la comparativa con los datos de la Fundación Pares, dado que estos datos ya estaban debidamente agrupados y contados en el informe anexo al artículo, se agregaron de forma manual sin necesidad de scrapping y se construyo una gráfica utilizando el Data Frame ya creado con anteriridad perteneciente a los datos de la Silla Vacía, y junto con el Data Frame de Pares, se unieron para hacer una gráfica de doble barra para cada partido utilizando **seaborn** y **matplotlib**. Un detalle importante es la revisión rigurosa del nombre de los partidos, pues incluso la diferencia en una mayúscula hacía que el programa no interprete que son el mismo partido y los muestre como dos partidos distintos. Por ejemplo, en Pares el 'Partido Liberal' era referenciado como 'Partido Liberal Colombiano', así que tuvo que ser renombrado a ser solo 'Partido Liberal' para que coincidiera con el nombre dado en la Silla Vacía y el programa pudiera interpretar que son el mismo grupo y comparar las cantidades de candidatos cuestionados.
+
 ---
 
 ## Instalación
