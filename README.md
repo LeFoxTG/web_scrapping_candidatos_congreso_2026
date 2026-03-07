@@ -44,7 +44,7 @@ pip install requests pandas matplotlib seaborn
 ## Uso
 
 ```bash
-python scraper.py
+python scrapping.py
 ```
 
 Al ejecutarlo verás en consola:
