@@ -222,7 +222,7 @@ def comparativa_con_pares(conteo_df_datos_silla):
         ax.bar_label(container, padding=4, fontsize=10, color="#E0E0E0")
 
     # Títulos y etiquetas
-    ax.set_title('Comparativo: Candidatos con líos por partido\nMis Datos vs. Fundación Pares (Elecciones 2026)', 
+    ax.set_title('Comparativo: Candidatos con líos por partido\nLa Silla Vacía vs. Fundación Pares (Elecciones 2026)', 
                  fontsize=16, fontweight='bold', pad=20)
     ax.set_xlabel('Cantidad de candidatos con líos', fontsize=12)
     ax.set_ylabel('')
@@ -303,3 +303,4 @@ comparativa_con_pares(conteo_silla)
 #             ░░░░░░░░░░░░░░░░░░░░░░░▒▓▓███████████▓▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #            ░░░░░░░░░░░░░░░░░░░░░░░░▒▓████████████▓▒░░░░░░░░░░░░░░░░░░░░░░▒▒▒░░░░░░░░░░░░░░░░░░░░░░░
 # FoxTG 🗣💕
+
